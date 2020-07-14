@@ -1,5 +1,5 @@
 - name: Deploy on OpenStack
-  hosts: localhost
+  hosts: 10.1.0.12
   gather_facts: false
   tasks:
     - name: Deploy an instance
