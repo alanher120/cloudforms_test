@@ -1,0 +1,16 @@
+- name: Deploy on OpenStack
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Deploy an instance
+      os_server:
+      state: present
+      name: webserver
+      image: cirros
+      key_name: alan_key
+      wait: yes
+      flavor: m1.tiny
+      auto_floating_ip: no
+      network: private
+      meta:
+        hostname: webserver.localdomain
