@@ -1,0 +1,6 @@
+- name: simple playbook
+  hosts: 10.1.0.12
+  gather_facts: false
+  tasks:
+  - name: test connection
+    ping:
