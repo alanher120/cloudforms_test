@@ -1,0 +1,14 @@
+- name: Service Linking VM's to an existing service
+  hosts: localhost
+  connection: local
+  gather_facts: False
+
+  vars:
+  - manageiq_connection:
+      url: 'https://localhost.ssl:3000'
+      username: 'admin'
+      password: 'smartvm'
+      manageiq_validate_certs: false
+
+  roles:
+  - manageiq-core.manageiq-vmdb
