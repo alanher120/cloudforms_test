@@ -1,0 +1,7 @@
+- name: Network Getting Started First Playbook
+  gather_facts: false
+  hosts: 10.1.0.12
+  tasks:
+  - name: Display message
+    debug:
+      msg: hello ansible
